@@ -1,0 +1,19 @@
+' -----[ Title ]-----------------------------------------------------------
+' Process Control - SimpleFlowchartChallenge.bs2
+' Code from flowchart
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+' -----[ Declarations ]----------------------------------------------------
+Photo     PIN  0                 ' Alias for photoresistor circuit on P0
+LED       PIN  5                 ' Alias for LED on P5
+Buzzer    PIN  10                ' Alias for buzzer on P10
+
+' -----[ Main Routine ]----------------------------------------------------
+DO
+  HIGH LED                      ' Turn ON LED
+  PAUSE 500                     ' 1/2 second delay
+  FREQOUT Buzzer, 1000, 2000    ' Sound buzzer at 2000Hz for 1 second
+  LOW LED                       ' Turn OFF LED
+  PAUSE 500                     ' 1/2 second delay
+LOOP                            ' Loop back to DO to repeat continuously
