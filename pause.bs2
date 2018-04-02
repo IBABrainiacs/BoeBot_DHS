@@ -1,0 +1,12 @@
+' {$STAMP BS2}
+DEBUG "Start timer 8000"
+
+PAUSE 15000
+DEBUG CR, "One Second elapsed "
+
+PAUSE 45000
+DEBUG CR, "Three seconds elapsed "
+
+DEBUG CR, "Done."
+
+END

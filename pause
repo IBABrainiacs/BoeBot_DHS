@@ -1,0 +1,5 @@
+DEBUG "Start timer 8000"
+
+Pause 1000
+Debug CR, "One Second elapsed "
+

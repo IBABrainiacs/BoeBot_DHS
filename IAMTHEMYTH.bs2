@@ -1,0 +1,10 @@
+' Stamps in Class - FirstProgram.bs2
+' BASIC Stamp sends message to Debug Terminal.
+
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+DEBUG CR, "What's 7 X 11?"
+DEBUG CR, "The answer is: "
+DEBUG DEC 7 * 11
+END
