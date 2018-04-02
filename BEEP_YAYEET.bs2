@@ -1,0 +1,12 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+DEBUG CLS, "Beep!!!"                                       ' Display while speaker beeps.
+FREQOUT 4, 2000, 3000                                      ' SIgnal program start/reset
+
+DO
+  DEBUG CR, "Waiting for reset..."                         ' DO...LOOP
+  PAUSE 500                                                'Display message
+LOOP                                                       ' every 0.5 seconds
+                                                           ' until hardware reset.
+                                                           
