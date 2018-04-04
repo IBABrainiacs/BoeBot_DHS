@@ -1,0 +1,10 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+DEBUG "Scarez223 has 28 CARRIED Squad wins -Everybody who knows Scarez223"
+
+DO
+    PULSOUT 13, 750
+    PAUSE 20
+    PULSOUT 12, 750
+    LOOP

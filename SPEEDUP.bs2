@@ -1,0 +1,12 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+pulseCount    VAR    Word
+
+FOR pulseCount = 1 TO 100
+
+  PULSOUT 13, 750 + pulseCount
+  PULSOUT 12, 750 - pulseCount
+  PAUSE 20
+
+NEXT
