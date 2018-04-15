@@ -10,7 +10,7 @@ irDetectLeft   VAR   Bit
 irDetectRight  VAR   Bit
 distanceLeft   VAR   Nib
 distanceRight  VAR   Nib
-
+pulseCount      VAR    Byte
 ' Initialization '
 
 DEBUG CLS,
@@ -46,6 +46,13 @@ Get_Distances:
     irDetectRight = IN0
     distanceRight = distanceRight + irDetectRight
 
+    IF distanceLeft = distanceRight THEN
+     GOSUB Forward_Pulse
+    ELSEIF distanceLeft > distanceRight THEN
+      GOSUB Turn_Right
+    ELSEIF distanceLeft < distanceRight THEN
+      GOSUB Turn_Left
+    ENDIF
     PAUSE 100
 
    NEXT
@@ -59,7 +66,36 @@ Display_Distances:
   DEBUG CRSRXY,2,3, DEC1 distanceLeft,
         CRSRXY,9,3, DEC1 distanceRight
 
+Forward_Pulse:
+  PULSOUT 13,650
+  PULSOUT 12,850
+  PAUSE 20
+  RETURN
 
+Turn_Left:
+  FOR pulseCount = 0 TO 20
+    PULSOUT 13,850
+    PULSOUT 12,850
+    PAUSE 20
+  NEXT
+  RETURN
+
+Turn_Right:
+  FOR pulseCount = 0 TO 20
+    PULSOUT 13, 650
+    PULSOUT 12, 650
+
+    PAUSE 20
+  NEXT
+  RETURN
+
+Back_Up:
+  FOR pulseCount = 0 TO 40
+    PULSOUT 13, 850
+    PULSOUT 12, 650
+    PAUSE 20
+  NEXT
+  RETURN
 
 
 
