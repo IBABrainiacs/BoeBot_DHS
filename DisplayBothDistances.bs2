@@ -1,0 +1,24 @@
+' {$STAMP BS2}
+
+' [ Variables ] '
+
+freqSelect     VAR   Nib
+irFrequency    VAR   Word
+irDetectLeft   VAR   Bit
+irDetectRight  VAR   Nib
+distanceRight  VAR   Nib
+
+' [ Initialization ] '
+
+DEBUG CLS
+      "IR OBJECT ZONE", CR,
+      "Left Right", CR,
+      " ---- ----"
+
+' [ Main Routine ] '
+
+DO
+
+
+
+

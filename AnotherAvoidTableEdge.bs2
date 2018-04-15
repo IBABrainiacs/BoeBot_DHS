@@ -13,6 +13,7 @@ DEBUG CLS,
       "IR Detections",CR,
       "Left   Right",CR,
       "====   ====="
+
 DO
  FREQOUT 8, 1, 38500
  irDetectLeft = IN9
@@ -25,26 +26,30 @@ DO
   DEBUG "Sees both",CR
   HIGH 10
   HIGH 1
-  GOSUB Back_Up
-  GOSUB Turn_Left
-  GOSUB Turn_Left
+  pulseCount = 1
+  pulseLeft = 850
+  pulseRight = 550
 ELSEIF (irDetectLeft = 1) AND (irDetectRight = 1) THEN
   DEBUG "Doesnt see either", CR
   LOW 10
   LOW 1
-  GOSUB Forward_Pulse
-ELSEIF (irDetectRight = 1) THEN
+  pulseCount = 15
+  pulseLeft = 550
+  pulseRight = 950
+  ELSEIF (irDetectRight = 1) THEN
    DEBUG "Sees Right",CR
   LOW 10
   HIGH 1
-  GOSUB Back_Up
-  GOSUB Turn_Right
-ELSE
+  pulseCount = 10
+  pulseLeft = 650
+  pulseRight = 650
+  ELSE
   DEBUG "Sees left",CR
   LOW 10
   HIGH 1
-  GOSUB Back_Up
-  GOSUB Turn_Left
+  pulseCount = 10
+  pulseLeft = 850
+  pulseRight = 850
 ENDIF
 
   FOR loopCount = 1 TO pulseCount
@@ -54,33 +59,3 @@ ENDIF
   NEXT
 
 LOOP
-Forward_Pulse:
-  PULSOUT 13,650
-  PULSOUT 12,850
-  PAUSE 20
-  RETURN
-
-Turn_Left:
-  FOR pulseCount = 0 TO 10
-    PULSOUT 13,850
-    PULSOUT 12,850
-    PAUSE 20
-  NEXT
-  RETURN
-
-Turn_Right:
-  FOR pulseCount = 0 TO 10
-    PULSOUT 13, 650
-    PULSOUT 12, 650
-
-    PAUSE 20
-  NEXT
-  RETURN
-
-Back_Up:
-  FOR pulseCount = 0 TO 40
-    PULSOUT 13, 850
-    PULSOUT 12, 650
-    PAUSE 20
-  NEXT
-  RETURN
