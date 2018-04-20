@@ -30,7 +30,7 @@ Forward_Pulse:
 
 Turn_Left:
 DEBUG "Turn Left", CR
-  FOR pulseCount = 0 TO 23
+  FOR pulseCount = 0 TO 27
     PULSOUT 13,950
     PULSOUT 12,950
     PAUSE 20
@@ -39,7 +39,7 @@ DEBUG "Turn Left", CR
 
   Turn_Right:
   DEBUG "TURN RIGHT",CR
-  FOR pulseCount = 0 TO 23
+  FOR pulseCount = 0 TO 27
     PULSOUT 13, 450
     PULSOUT 12, 450
 
