@@ -1,0 +1,273 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+DEBUG "Program Running!"
+
+counter       VAR   Word
+counter2       VAR   Word
+
+FREQOUT 4, 2000, 3000
+
+DEBUG "Forward 1"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 45
+
+NEXT
+
+DEBUG "backward 2"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 650
+  PULSOUT 12, 850
+  PAUSE 45
+
+NEXT
+
+DEBUG "Right 3"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 45
+  LOW 10
+  HIGH 1
+
+NEXT
+
+DEBUG "left 4"
+FOR counter = 1 TO 30
+
+  PULSOUT 13, 650
+  PULSOUT 12, 650
+  PAUSE 45
+  LOW 1
+  HIGH 10
+
+
+NEXT
+
+DEBUG "Right 5"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 45
+  LOW 1
+  LOW 10
+
+NEXT
+
+DEBUG "Forward 6"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 45
+
+NEXT
+
+DEBUG "Spin 7"
+FOR counter = 1 TO 51
+
+  PULSOUT 13, 650
+  PULSOUT 12, 650
+  PAUSE 85
+    HIGH 1
+    LOW  10
+    PAUSE 1
+    LOW 1
+    HIGH 10
+
+
+NEXT
+LOW 1
+LOW 10
+DEBUG "Forward 8"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 90
+
+NEXT
+
+DEBUG "Right 9"
+FOR counter = 1 TO 9
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 90
+
+NEXT
+
+DEBUG "Left 10"
+FOR counter = 1 TO 16
+
+  PULSOUT 13, 650
+  PULSOUT 12, 650
+  PAUSE 70
+
+NEXT
+
+DEBUG "Right 11"
+FOR counter = 1 TO 9
+
+PULSOUT 13, 850
+PULSOUT 12, 850
+PAUSE 70
+
+NEXT
+
+DEBUG "Back 12"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 650
+  PULSOUT 12, 850
+  PAUSE 50
+
+NEXT
+
+DEBUG "Forward Stutter 13"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Backward Stutter 14"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 650
+  PULSOUT 12, 850
+  PAUSE 7
+
+NEXT
+
+DEBUG "Forward Stutter 15"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Right 16"
+FOR counter = 1 TO 10
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 50
+
+NEXT
+
+DEBUG "Forward Stutter 17"
+FOR counter = 1 TO  15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Backward Stutter 18"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 650
+  PULSOUT 12, 850
+  PAUSE 7
+
+NEXT
+
+DEBUG "Forward Stutter 19"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Left 20"
+FOR counter = 1 TO 25
+
+  PULSOUT 13, 650
+  PULSOUT 12, 650
+  PAUSE 25
+
+NEXT
+
+DEBUG "Forward Stutter 21"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Backward Stutter 22"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 650
+  PULSOUT 12, 850
+  PAUSE 7
+
+NEXT
+
+DEBUG "Forward Stutter 23"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 650
+  PAUSE 7
+
+NEXT
+
+DEBUG "Right 24"
+FOR counter = 1 TO 15
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 25
+
+NEXT
+
+DEBUG "Spin 25"
+FOR counter = 1 TO 49
+
+  PULSOUT 13, 850
+  PULSOUT 12, 850
+  PAUSE 90
+
+NEXT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
